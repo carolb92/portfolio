@@ -6,6 +6,46 @@
     <title>Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/7c6ecdb88c.js" crossorigin="anonymous"></script>
+    <style>
+        /******** TO DO: try to set !important to hover effect for text color *******/
+        a:hover {
+            color:#1AF870 !important;
+            font-size: 1.1rem;
+        }
+
+        .hover:hover{
+            background-color:#1AF870;
+        }
+        
+        .typed-out {
+            /* makes sure the text content isn't revealed until the typing animation has started */
+            overflow: hidden;
+            width: 0;
+            /* creates the typewriter cursor */
+            border-right: 0.15rem solid #1AF870;
+            white-space: nowrap;
+            /* sets typing duration to 1s, direction is set to forward so the text element won't go back to width: 0 when the animation is finished*/
+            /* the steps function specifies the number of intervals in the function and specifies the point at which the change of values occur within the interval*/
+            /* splits the typing animation into 20 steps */
+            animation: 
+                typing 1.5s steps(25, end) forwards,
+                /* makes the cursor disappear and reappear every 0.8s, forever */
+                blink 0.8s infinite;
+        }
+        
+        /* animation will gradually change from the current style to the new style at certain times */
+        @keyframes typing {
+            from { width: 0}
+            to { width: 100% }
+        }
+
+        /* cursor blinking effect */
+        @keyframes blink {
+            from { border-color: transparent; }
+            to { border-color:#1AF870; }
+        }
+
+    </style>
 </head>
 
 <body style="padding-top: 8px;">
@@ -14,15 +54,15 @@
         <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #07105F;">
             <div class="container-fluid justify-content-end">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon text-light"></span>
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link mx-4 text-light" href="#projects">Projects</a>
-                        <a class="nav-link mx-4 text-light" href="#skills">Skills</a>
-                        <a class="nav-link mx-4 text-light" href="#about">About</a>
-                        <a class="nav-link mx-4 text-light" href="#contact">Contact</a>
+                        <a class="nav-link mx-4 text-light text-uppercase" href="#projects">Projects</a>
+                        <a class="nav-link mx-4 text-light text-uppercase" href="#skills">Skills</a>
+                        <a class="nav-link mx-4 text-light text-uppercase" href="#about">About</a>
+                        <a class="nav-link mx-4 text-light text-uppercase" href="#contact">Contact</a>
                     </div>
                 </div>
             </div>
@@ -31,11 +71,15 @@
 
     <!-- JUMBOTRON -->
         <main class="container-fluid px-0">
-            <div class="jumbotron jumbotron-fluid my-5 pb-5" style="background-color: #07105F;">
+            <div class="jumbotron jumbotron-fluid my-5 pb-5 px-5" style="background-color: #07105F;">
                 <div class="container d-flex justify-content-center flex-column align-items-center">
                     <img src="./img/coding.png" alt="coding-icon" class="img-fluid" style="width:10%;">
                     <h1 class="display-2 text-light">Hi, I'm Carol</h1>
-                    <p class="display-6 text-light">Frontend developer</p>
+                    <!-- wrapper "stops" the cursor at the last letter of the .typed-out element -->
+                    <div class="wrapper">
+                        <p class="display-6 font-monospace typed-out" style="color: #1AF870;">Frontend developer</p>
+                    </div>
+                    
                 </div>
             </div>
 
@@ -179,56 +223,67 @@
                         <p>Chrome DevTools</p>
                     </div>
                 </div>
+            </div>
 
-                <!-- <div class="d-flex flex-wrap justify-content-center">
-                    <div class="bg-info flex-fill pt-3 mx-3 px-3">
-                        <p>Git & the Command Line</p>
+            <!-- ABOUT -->
+            <div id="about" class="container text-center">
+                <h2 class="display-6 my-5" style="color:#07105F;">About Me</h2>
+                <div class="row align-items-center justify-content-around gx-5 mx-auto">
+                    <div class="col-md-4 border border-light pt-3 pb-5 shadow rounded mb-4">
+                        <img class="img-fluid mx-auto" src="./img/IMG_9247.jpeg" alt="profile photo" height="250px">
                     </div>
-                    <div class="bg-info flex-fill pt-3 mx-3 px-3">
-                        <p>FTP Client</p>
-                    </div>
-                    <div class="bg-info flex-fill pt-3 mx-3 px-3">
-                        <p>VS Code</p>
-                    </div>
-                    <div class="bg-info flex-fill pt-3 mx-3 px-3">
-                        <p>Code Sandbox</p>
-                    </div>
-                    <div class="bg-info flex-fill pt-3 mx-3 px-3">
-                        <p>Photoshop</p>
-                    </div>
-                    <div class="bg-info flex-fill pt-3 mx-3 px-3">
-                        <p>Chrome DevTools</p>
-                    </div>
-                </div> -->
-                <!-- <div class="row justify-content-center">
-                    <div class="col col-md-6 col-lg-4 bg-info pt-3 mx-3 my-3">
-                        <p>Git & the Command Line</p>
-                    </div>
-                    <div class="col col-md-6 col-lg-4 bg-info pt-3 mx-3 my-3">
-                        <p>FTP Client</p>
+
+                    <div class="col-md-7">
+                        <div class="card">
+                            <div class="card-header bg-light text-start">
+                                <i class="fa-solid fa-circle" style="color:#CB374E;"></i>
+                                <i class="fa-solid fa-circle" style="color:#EECC3F;"></i>
+                                <i class="fa-solid fa-circle" style="color:#44BC33;"></i>
+                            </div>
+                            <div class="card-body text-justify">
+                                <p>
+                                    Hi! 👋  My name is Carol. After working in healthcare for several years, I have spent the last 1+ years working toward a career change as a frontend developer.
+                                    After caring for patients in the emergency department throughout the Covid-19 pandemic, I found that my priorities and career goals had undergone a major shift. 
+                                    I began looking for a career that would allow me to use my problem-solving skills, strong background in teamwork, and creativity while also leaving me with more time and energy to spend with my loved ones. 
+                                    As I researched opportunities in the tech industry, I quickly realized that a career as a frontend developer was a perfect fit. I decided to enroll in a boot camp and relished in the challenge of learning a completely new skill set. 
+                                    I have grown to find that building websites and web applications is both fulfilling and fun.
+                                    When I’m not coding, you can find me in the kitchen experimenting with new vegan recipes, reading a horror novel for my spooky book club, or hanging out with my dogs.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="row justify-content-center">
-                    <div class="col col-md-6 col-lg-4 bg-info pt-3 mx-3 my-3">
-                        <p>VS Code</p>
-                    </div>
-                    <div class="col col-md-6 col-lg-4 bg-info pt-3 mx-3 my-3">
-                        <p>Code Sandbox</p>
-                    </div>
-                </div>
-                    
-                
-                <div class="row justify-content-center">
-                    <div class="col col-md-6 col-lg-4 bg-info pt-3 mx-3 my-3">
-                        <p>Photoshop</p>
-                    </div>
-                    <div class="col col-md-6 col-lg-4 bg-info pt-3 mx-3 my-3">
-                        <p>Chrome DevTools</p>
-                    </div>
-                </div> -->
             </div>
         </main>
+
+        <!-- FOOTER -->
+        <footer id="contact">
+            <div class="container-fluid text-center text-light" style="background-color: #07105F;">
+                <h2 class="display-6 my-5 pt-5">Get in Touch!</h2>
+                <div class="row">
+                    <div class="col col-12 col-md-4 pb-3">
+                        <h4 class="mb-3 text-info">Hire Me</h4>
+                        <address>
+                            <a href="mailto:carol.bruggeman92@gmail.com" class="text-decoration-none text-light">carol.bruggeman92@gmail.com</a>
+                        </address>
+                    </div>
+                    <div class="col col-12 col-md-4 pb-4">
+                        <h4 class="mb-3 text-info">Follow Me</h4>
+                            <a href="https://github.com/carolb92"><i class="fa-brands fa-github fs-1 mx-4 text-light py-1 px-1 hover"></i></a>
+                            <a href="https://www.linkedin.com/in/carol-bruggeman-576897258/"><i class="fa-brands fa-linkedin fs-1 mx-4 text-light py-1 px-1 hover"></i></a>
+                    </div>
+                    <div class="col col-12 col-md-4 pb-4">
+                        <h4 class="mb-3 text-info">Meet Me</h4>
+                        <p>
+                            <i class="fa-solid fa-map-pin fs-5"></i>
+                            Gainesville, FL
+                        </p>
+                        <p>In town? Let's grab coffee.</p>
+                    </div>
+                </div>
+                <p class="pt-5 pb-3" style="font-size: 0.75rem;">Carol Bruggeman || 2022</p>
+            </div>
+        </footer>
         
     
     
