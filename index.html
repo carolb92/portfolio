@@ -1,308 +1,518 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Carol Bruggeman Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/7c6ecdb88c.js" crossorigin="anonymous"></script>
-    <style>
-        .hover-text-color:hover {
-            color:#1AF870 !important;
-        }
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Carol Bruggeman Portfolio</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://kit.fontawesome.com/7c6ecdb88c.js"
+			crossorigin="anonymous"
+		></script>
+		<style>
+			.hover-text-color:hover {
+				color: #1af870 !important;
+			}
 
-        .hover-background:hover{
-            background-color:#1AF870;
-        }
-        
-        .typed-out {
-            /* makes sure the text content isn't revealed until the typing animation has started */
-            overflow: hidden;
-            width: 0;
-            /* creates the typewriter cursor */
-            border-right: 0.15rem solid #1AF870;
-            white-space: nowrap;
-            /* sets typing duration to 1.5s, direction is set to forward so the text element won't go back to width: 0 when the animation is finished*/
-            /* the steps function specifies the number of intervals in the function and specifies the point at which the change of values occur within the interval*/
-            /* splits the typing animation into 25 steps */
-            animation: 
-                typing 1.5s steps(25, end) forwards,
-                /* makes the cursor disappear and reappear every 0.8s, forever */
-                blink 0.8s infinite;
-        }
-        
-        /* animation will gradually change from the current style to the new style at certain times */
-        @keyframes typing {
-            from { width: 0}
-            to { width: 100% }
-        }
+			.hover-background:hover {
+				background-color: #1af870;
+			}
 
-        /* cursor blinking effect */
-        @keyframes blink {
-            from { border-color: transparent; }
-            to { border-color:#1AF870; }
-        }
+			.typed-out {
+				/* makes sure the text content isn't revealed until the typing animation has started */
+				overflow: hidden;
+				width: 0;
+				/* creates the typewriter cursor */
+				border-right: 0.15rem solid #1af870;
+				white-space: nowrap;
+				/* sets typing duration to 1.5s, direction is set to forward so the text element won't go back to width: 0 when the animation is finished*/
+				/* the steps function specifies the number of intervals in the function and specifies the point at which the change of values occur within the interval*/
+				/* splits the typing animation into 25 steps */
+				animation: typing 1.5s steps(25, end) forwards,
+					/* makes the cursor disappear and reappear every 0.8s, forever */
+						blink 0.8s infinite;
+			}
 
-        .card a{
-            font-weight:bold;
-        }
-    </style>
-</head>
+			/* animation will gradually change from the current style to the new style at certain times */
+			@keyframes typing {
+				from {
+					width: 0;
+				}
+				to {
+					width: 100%;
+				}
+			}
 
-<body class="pt-2">
-    <header style="background-color: #07105F;">
-        <!-- NAV -->
-        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #07105F;">
-            <div class="container-fluid justify-content-end">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon text-light">
-                    <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
-                </span>
-                </button>
+			/* cursor blinking effect */
+			@keyframes blink {
+				from {
+					border-color: transparent;
+				}
+				to {
+					border-color: #1af870;
+				}
+			}
 
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link mx-4 text-light text-uppercase hover-text-color" href="#projects">Projects</a>
-                        <a class="nav-link mx-4 text-light text-uppercase hover-text-color" href="#skills">Skills</a>
-                        <a class="nav-link mx-4 text-light text-uppercase hover-text-color" href="#about">About</a>
-                        <a class="nav-link mx-4 text-light text-uppercase hover-text-color" href="#contact">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+			.card a {
+				font-weight: bold;
+			}
+		</style>
+	</head>
 
-    
-        <main class="container-fluid px-0">
-            <!-- JUMBOTRON -->
-            <div class="jumbotron jumbotron-fluid my-5 pb-5 px-5" style="background-color: #07105F;">
-                <div class="container d-flex justify-content-center flex-column align-items-center">
-                    <img src="./img/coding.png" alt="coding-icon" class="img-fluid" style="width:10%;">
-                    <h1 class="display-4 text-light text-center">Carol Bruggeman</h1>
-                    <!-- wrapper "stops" the cursor at the last letter of the .typed-out element -->
-                    <div class="wrapper">
-                        <p class="display-6 font-monospace typed-out" style="color: #1AF870;">Front End Developer</p>
-                    </div>
-                    
-                </div>
-            </div>
+	<body class="pt-2">
+		<header style="background-color: #07105f">
+			<!-- NAV -->
+			<nav
+				class="navbar navbar-expand-lg fixed-top"
+				style="background-color: #07105f"
+			>
+				<div class="container-fluid justify-content-end">
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarNavAltMarkup"
+						aria-controls="navbarNavAltMarkup"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon text-light">
+							<i class="fas fa-bars" style="color: #fff; font-size: 28px"></i>
+						</span>
+					</button>
 
-            <!-- PROJECTS -->
-            <div id="projects" class="container justify-content-center align-items-center d-flex flex-wrap mt-5" style="color:#07105F;">
-                <h2 class="display-6 mb-5">Projects</h2>
+					<div
+						class="collapse navbar-collapse justify-content-end"
+						id="navbarNavAltMarkup"
+					>
+						<div class="navbar-nav">
+							<a
+								class="nav-link mx-4 text-light text-uppercase hover-text-color"
+								href="#projects"
+								>Projects</a
+							>
+							<a
+								class="nav-link mx-4 text-light text-uppercase hover-text-color"
+								href="#skills"
+								>Skills</a
+							>
+							<a
+								class="nav-link mx-4 text-light text-uppercase hover-text-color"
+								href="#about"
+								>About</a
+							>
+							<a
+								class="nav-link mx-4 text-light text-uppercase hover-text-color"
+								href="#contact"
+								>Contact</a
+							>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
 
-                <div class="row justify-content-around d-flex flex-wrap">
-                    <div class="col-sm-12 col-md-6 col-lg-4 my-4">
-                        <div class="card w-30 text-center h-100 shadow">
-                            <a href="https://hoq3n8.csb.app/" target="_blank">
-                                <img src="./img/super-sticky-notes-tiny.png" class="card-img-top" alt="website-screenshot">
-                            </a>
-                            <h5 class="class card-title my-4">Super Sticky Notes</h5>
-                            <div class="card-body">
-                                <p class="card-text">A single page application built with React that allows users to add, edit, delete, and search sticky notes for to-dos or task management.</p>
-                                <p class="class card-text"><strong>Skills: </strong>React, Lifecycle Methods</p>
-                                <p class="class card-text"><strong>Tools: </strong>Code Sandbox</p>
-                                <a href="https://hoq3n8.csb.app/" target="_blank" class="btn btn-primary text-uppercase">Live Site</a>
-                            </div>
-                        </div>
-                    </div>
+		<main class="container-fluid px-0">
+			<!-- JUMBOTRON -->
+			<div
+				class="jumbotron jumbotron-fluid my-5 pb-5 px-5"
+				style="background-color: #07105f"
+			>
+				<div
+					class="container d-flex justify-content-center flex-column align-items-center"
+				>
+					<img
+						src="./img/coding.png"
+						alt="coding-icon"
+						class="img-fluid"
+						style="width: 10%"
+					/>
+					<h1 class="display-4 text-light text-center">Carol Bruggeman</h1>
+					<!-- wrapper "stops" the cursor at the last letter of the .typed-out element -->
+					<div class="wrapper">
+						<p
+							class="display-6 font-monospace typed-out"
+							style="color: #1af870"
+						>
+							Front End Developer
+						</p>
+					</div>
+				</div>
+			</div>
 
-                    <div class="col-sm-12 col-md-6 col-lg-4 my-4">
-                        <div class="card w-30 text-center h-100 shadow">
-                            <a href="https://carolb92.github.io/guess-the-word/" target="_blank">
-                                <img src="./img/guess-the-word-tiny.png" class="card-img-top" alt="website-screenshot">
-                            </a>
-                            <h5 class="class card-title my-4">Guess the Word Game</h5>
-                            <div class="card-body">
-                                <p class="card-text">In this interactive game built with JavaScript, players get eight tries to guess a word, letter by letter.</p>
-                                <p class="class card-text"><strong>Skills: </strong>JavaScript, API</p>
-                                <p class="class card-text"><strong>Tools: </strong>GitHub Pages</p>
-                                <a href="https://carolb92.github.io/guess-the-word/" target="_blank" class="btn btn-primary text-uppercase">Live Site</a>
-                            </div>
-                        </div>
-                    </div>
+			<!-- PROJECTS -->
+			<div
+				id="projects"
+				class="container justify-content-center align-items-center d-flex flex-wrap mt-5"
+				style="color: #07105f"
+			>
+				<h2 class="display-6 mb-5">Projects</h2>
 
-                    <div class="col-sm-12 col-md-6 col-lg-4 my-4">
-                        <div class="card w-30 text-center h-100 shadow">
-                            <a href="https://carolb92.github.io/unplugged-repo/index.html" target="_blank">
-                                <img src="./img/unplugged-retreat-tiny.png" class="card-img-top" alt="unplugged websitescreenshot">
-                            </a>
-                            <h5 class="class card-title my-4">Unplugged Retreat</h5>
-                            <div class="card-body">
-                                <p class="card-text">A multi-page, responsive website for a company retreat built with Flexbox. A clean, efficient site which integrates a Google Maps feature and responsive elements.</p>
-                                <p class="class card-text"><strong>Skills: </strong>HTML, CSS, Flexbox</p>
-                                <p class="class card-text"><strong>Tools: </strong>Photoshop, GitHub Pages, Chrome DevTools</p>
-                                <a href="https://carolb92.github.io/unplugged-repo/index.html" target="_blank" class="btn btn-primary text-uppercase">Live Site</a>
-                            </div>
-                        </div>
-                    </div>
+				<div class="row justify-content-around d-flex flex-wrap">
+					<div class="col-sm-12 col-md-6 col-lg-4 my-4">
+						<div class="card w-30 text-center h-100 shadow">
+							<a href="https://hoq3n8.csb.app/" target="_blank">
+								<img
+									src="./img/super-sticky-notes-tiny.png"
+									class="card-img-top"
+									alt="website-screenshot"
+								/>
+							</a>
+							<h5 class="class card-title my-4">Super Sticky Notes</h5>
+							<div class="card-body">
+								<p class="card-text">
+									A single page application built with React that allows users
+									to add, edit, delete, and search sticky notes for to-dos or
+									task management.
+								</p>
+								<p class="class card-text">
+									<strong>Skills: </strong>React, Lifecycle Methods
+								</p>
+								<p class="class card-text">
+									<strong>Tools: </strong>Code Sandbox
+								</p>
+								<a
+									href="https://hoq3n8.csb.app/"
+									target="_blank"
+									class="btn btn-primary text-uppercase"
+									>Live Site</a
+								>
+							</div>
+						</div>
+					</div>
 
-                    <div class="col-sm-12 col-md-6 col-lg-4 my-4">
-                        <div class="card w-30 text-center h-100 shadow">
-                            <a href="https://demo.bigccodes.com/" target="_blank">
-                                <img src="./img/fictional-university.png" class="card-img-top" alt="fictional university website screenshot">
-                            </a>
-                            <h5 class="class card-title my-4">Fictional University</h5>
-                            <div class="card-body">
-                                <p class="card-text">This is a WordPress website for a fictional university. I created a custom theme from an HTML/CSS template and built an interactive site with custom pages and post types, implementing several plugins to make content management a breeze from the admin dashboard.</p>
-                                <p class="class card-text"><strong>Skills: </strong>WordPress, PHP, custom themes</p>
-                                <p class="class card-text"><strong>Tools: </strong>Advanced Custom Fields plugin, Members plugin</p>
-                                <a href="https://demo.bigccodes.com/" target="_blank" class="btn btn-primary text-uppercase">Live Site</a>
-                            </div>
-                        </div>
-                    </div>
+					<div class="col-sm-12 col-md-6 col-lg-4 my-4">
+						<div class="card w-30 text-center h-100 shadow">
+							<a
+								href="https://carolb92.github.io/guess-the-word/"
+								target="_blank"
+							>
+								<img
+									src="./img/guess-the-word-tiny.png"
+									class="card-img-top"
+									alt="website-screenshot"
+								/>
+							</a>
+							<h5 class="class card-title my-4">Guess the Word Game</h5>
+							<div class="card-body">
+								<p class="card-text">
+									In this interactive game built with JavaScript, players get
+									eight tries to guess a word, letter by letter.
+								</p>
+								<p class="class card-text">
+									<strong>Skills: </strong>JavaScript, API
+								</p>
+								<p class="class card-text">
+									<strong>Tools: </strong>GitHub Pages
+								</p>
+								<a
+									href="https://carolb92.github.io/guess-the-word/"
+									target="_blank"
+									class="btn btn-primary text-uppercase"
+									>Live Site</a
+								>
+							</div>
+						</div>
+					</div>
 
-                    <div class="col-sm-12 col-md-6 col-lg-4 my-4">
-                        <div class="card w-30 text-center h-100 shadow">
-                            <a href="https://carolb92.github.io/206-rogue-pickings-responsive/" target="_blank">
-                                <img src="./img/rogue-pickings-tiny.png" class="card-img-top" alt="website-screenshot">
-                            </a>
-                            <h5 class="card-title my-4">Rogue Pickings</h5>
-                            <div class="card-body">
-                                <p class="card-text">A simple, single-page, responsive homepage for a local restaurant. Initially built as a static site, I converted it to a responsive layout with Flexbox.</p>
-                                <p class="class card-text"><strong>Skills: </strong>HTML, CSS, Flexbox</p>
-                                <p class="class card-text"><strong>Tools: </strong>GitHub Pages, Photoshop, Chrome DevTools</p>
-                                <a href="https://carolb92.github.io/206-rogue-pickings-responsive/" target="_blank" class="btn btn-primary text-uppercase">Live Site</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-            </div>
+					<div class="col-sm-12 col-md-6 col-lg-4 my-4">
+						<div class="card w-30 text-center h-100 shadow">
+							<a
+								href="https://carolb92.github.io/unplugged-repo/index.html"
+								target="_blank"
+							>
+								<img
+									src="./img/unplugged-retreat-tiny.png"
+									class="card-img-top"
+									alt="unplugged websitescreenshot"
+								/>
+							</a>
+							<h5 class="class card-title my-4">Unplugged Retreat</h5>
+							<div class="card-body">
+								<p class="card-text">
+									A multi-page, responsive website for a company retreat built
+									with Flexbox. A clean, efficient site which integrates a
+									Google Maps feature and responsive elements.
+								</p>
+								<p class="class card-text">
+									<strong>Skills: </strong>HTML, CSS, Flexbox
+								</p>
+								<p class="class card-text">
+									<strong>Tools: </strong>Photoshop, GitHub Pages, Chrome
+									DevTools
+								</p>
+								<a
+									href="https://carolb92.github.io/unplugged-repo/index.html"
+									target="_blank"
+									class="btn btn-primary text-uppercase"
+									>Live Site</a
+								>
+							</div>
+						</div>
+					</div>
 
-            <!-- SKILLS -->
-            <div id="skills" class="container-fluid text-center mt-5 px-5 py-4 text-light" style="background-color:#07105F;">
-                <h2 class="display-6 mt-5">Skills</h2>
-                <h3 class="fs-4 my-5">Developer Skills</h3>
-                <div class="row justify-content-around">
-                    <div class="col col-3 col-lg-1">
-                        <i class="fa-brands fa-html5 text-info display-5"></i>
-                        <p class="text-light">HTML5</p>
-                    </div>
+					<div class="col-sm-12 col-md-6 col-lg-4 my-4">
+						<div class="card w-30 text-center h-100 shadow">
+							<a href="https://demo.bigccodes.com/" target="_blank">
+								<img
+									src="./img/fictional-university.png"
+									class="card-img-top"
+									alt="fictional university website screenshot"
+								/>
+							</a>
+							<h5 class="class card-title my-4">Fictional University</h5>
+							<div class="card-body">
+								<p class="card-text">
+									This is a WordPress website for a fictional university. I
+									created a custom theme from an HTML/CSS template and built an
+									interactive site with custom pages and post types,
+									implementing several plugins to make content management a
+									breeze from the admin dashboard.
+								</p>
+								<p class="class card-text">
+									<strong>Skills: </strong>WordPress, PHP, custom themes
+								</p>
+								<p class="class card-text">
+									<strong>Tools: </strong>Advanced Custom Fields plugin, Members
+									plugin
+								</p>
+								<a
+									href="https://demo.bigccodes.com/"
+									target="_blank"
+									class="btn btn-primary text-uppercase"
+									>Live Site</a
+								>
+							</div>
+						</div>
+					</div>
 
-                    <div class="col col-3 col-lg-1">
-                        <i class="fa-brands fa-css3-alt text-info display-5"></i>
-                        <p class="text-light">CSS3</p>
-                    </div>
+					<div class="col-sm-12 col-md-6 col-lg-4 my-4">
+						<div class="card w-30 text-center h-100 shadow">
+							<a
+								href="https://carolb92.github.io/206-rogue-pickings-responsive/"
+								target="_blank"
+							>
+								<img
+									src="./img/rogue-pickings-tiny.png"
+									class="card-img-top"
+									alt="website-screenshot"
+								/>
+							</a>
+							<h5 class="card-title my-4">Rogue Pickings</h5>
+							<div class="card-body">
+								<p class="card-text">
+									A simple, single-page, responsive homepage for a local
+									restaurant. Initially built as a static site, I converted it
+									to a responsive layout with Flexbox.
+								</p>
+								<p class="class card-text">
+									<strong>Skills: </strong>HTML, CSS, Flexbox
+								</p>
+								<p class="class card-text">
+									<strong>Tools: </strong>GitHub Pages, Photoshop, Chrome
+									DevTools
+								</p>
+								<a
+									href="https://carolb92.github.io/206-rogue-pickings-responsive/"
+									target="_blank"
+									class="btn btn-primary text-uppercase"
+									>Live Site</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-                    <div class="col col-3 col-lg-1 gx-1">
-                        <i class="fa-brands fa-square-js text-info display-5"></i>
-                        <p class="text-light">JavaScript</p>
-                    </div>
+			<!-- SKILLS -->
+			<div
+				id="skills"
+				class="container-fluid text-center mt-5 px-5 py-4 text-light"
+				style="background-color: #07105f"
+			>
+				<h2 class="display-6 mt-5">Skills</h2>
+				<h3 class="fs-4 my-5">Developer Skills</h3>
+				<div class="row justify-content-around">
+					<div class="col col-3 col-lg-1">
+						<i class="fa-brands fa-html5 text-info display-5"></i>
+						<p class="text-light">HTML5</p>
+					</div>
 
-                    <div class="col col-3 col-lg-1">
-                        <i class="fa-brands fa-react text-info display-5"></i>
-                        <p class="text-light">React</p>
-                    </div>
+					<div class="col col-3 col-lg-1">
+						<i class="fa-brands fa-css3-alt text-info display-5"></i>
+						<p class="text-light">CSS3</p>
+					</div>
 
-                    <div class="col col-3 col-lg-1 gx-1">
-                        <i class="fa-brands fa-bootstrap text-info display-5"></i>
-                        <p class="text-light">Bootstrap</p>
-                    </div>
+					<div class="col col-3 col-lg-1 gx-1">
+						<i class="fa-brands fa-square-js text-info display-5"></i>
+						<p class="text-light">JavaScript</p>
+					</div>
 
-                    <div class="col col-3 col-lg-1">
-                        <i class="fa-brands fa-square-github text-info display-5"></i>
-                        <p class="text-light">GitHub</p>
-                    </div>
+					<div class="col col-3 col-lg-1">
+						<i class="fa-brands fa-react text-info display-5"></i>
+						<p class="text-light">React</p>
+					</div>
 
-                    <div class="col col-3 col-lg-1">
-                        <i class="fa-brands fa-wordpress text-info display-5"></i>
-                        <p class="text-light">WordPress</p>
-                    </div>
+					<div class="col col-3 col-lg-1 gx-1">
+						<i class="fa-brands fa-bootstrap text-info display-5"></i>
+						<p class="text-light">Bootstrap</p>
+					</div>
 
-                    <div class="col col-3 col-lg-1">
-                        <i class="fa-brands fa-php text-info display-5"></i>
-                        <p class="text-light">PHP</p>
-                    </div>
-                </div>
+					<div class="col col-3 col-lg-1">
+						<i class="fa-brands fa-square-github text-info display-5"></i>
+						<p class="text-light">GitHub</p>
+					</div>
 
-                <h3 class="fs-4 my-5">Tools</h3>
+					<div class="col col-3 col-lg-1">
+						<i class="fa-brands fa-wordpress text-info display-5"></i>
+						<p class="text-light">WordPress</p>
+					</div>
 
-                <div class="row justify-content-center gy-3 pb-5" style="color: #07105F;
-                font-weight: bold;">
-                    <div class="col col-12 col-md-5 col-lg-3 mx-3 bg-info pt-3">
-                        <p>Git & the Command Line</p>
-                    </div>
-                    <div class="col col-12 col-md-5 col-lg-3 mx-3 bg-info pt-3">
-                        <p>FTP Client</p>
-                    </div>
-                    <div class="col col-12 col-md-5 col-lg-3 mx-3 bg-info pt-3">
-                        <p>Code Editors</p>
-                    </div>
-                    <div class="col col-12 col-md-5 col-lg-3 mx-3 bg-info pt-3">
-                        <p>Figma</p>
-                    </div>
-                    <div class="col col-12 col-md-5 col-lg-3 mx-3 bg-info pt-3">
-                        <p>Photoshop</p>
-                    </div>
-                    <div class="col col-12 col-md-5 col-lg-3 mx-3 bg-info pt-3">
-                        <p>Chrome DevTools</p>
-                    </div>
-                </div>
-            </div>
+					<div class="col col-3 col-lg-1">
+						<i class="fa-brands fa-php text-info display-5"></i>
+						<p class="text-light">PHP</p>
+					</div>
+				</div>
 
-            <!-- ABOUT -->
-            <div id="about" class="container text-center">
-                <h2 class="display-6 my-5" style="color:#07105F;">About Me</h2>
-                <div class="row align-items-center justify-content-around gx-5 mx-auto">
-                    <div class="col-md-4 border border-light pt-3 pb-5 shadow rounded mb-4">
-                        <img class="img-fluid mx-auto pb-5 rounded" src="./img/IMG_9247-tiny.jpeg" alt="profile photo" height="250">
-                    </div>
+				<h3 class="fs-4 my-5">Tools</h3>
 
-                    <div class="col-md-7">
-                        <div class="card">
-                            <div class="card-header bg-light text-start">
-                                <i class="fa-solid fa-circle" style="color:#CB374E;"></i>
-                                <i class="fa-solid fa-circle" style="color:#EECC3F;"></i>
-                                <i class="fa-solid fa-circle" style="color:#44BC33;"></i>
-                            </div>
-                            <div class="card-body text-start">
-                                <p>
-                                    Hi! 👋  My name is Carol Bruggeman. After working in healthcare as a physician assistant for several years, I have spent the last 1+ years working toward a career change as a front end developer.
+				<div
+					class="row justify-content-center gy-3 pb-5"
+					style="color: #07105f; font-weight: bold"
+				>
+					<div class="col col-12 col-md-5 col-lg-3 mx-3 bg-info pt-3">
+						<p>Git & the Command Line</p>
+					</div>
+					<div class="col col-12 col-md-5 col-lg-3 mx-3 bg-info pt-3">
+						<p>FTP Client</p>
+					</div>
+					<div class="col col-12 col-md-5 col-lg-3 mx-3 bg-info pt-3">
+						<p>Code Editors</p>
+					</div>
+					<div class="col col-12 col-md-5 col-lg-3 mx-3 bg-info pt-3">
+						<p>Figma</p>
+					</div>
+					<div class="col col-12 col-md-5 col-lg-3 mx-3 bg-info pt-3">
+						<p>Photoshop</p>
+					</div>
+					<div class="col col-12 col-md-5 col-lg-3 mx-3 bg-info pt-3">
+						<p>Chrome DevTools</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- ABOUT -->
+			<div id="about" class="container text-center">
+				<h2 class="display-6 my-5" style="color: #07105f">About Me</h2>
+				<div class="row align-items-center justify-content-around gx-5 mx-auto">
+					<div
+						class="col-md-4 border border-light pt-3 pb-5 shadow rounded mb-4"
+					>
+						<img
+							class="img-fluid mx-auto pb-5 rounded"
+							src="./img/IMG_9247-tiny.jpeg"
+							alt="profile photo"
+							height="250"
+						/>
+					</div>
+
+					<div class="col-md-7">
+						<div class="card">
+							<div class="card-header bg-light text-start">
+								<i class="fa-solid fa-circle" style="color: #cb374e"></i>
+								<i class="fa-solid fa-circle" style="color: #eecc3f"></i>
+								<i class="fa-solid fa-circle" style="color: #44bc33"></i>
+							</div>
+							<div class="card-body text-start">
+								<p>
+									Hi! 👋 My name is Carol Bruggeman. In a past life, I was an
+									emergency medicine physician assistant - a taxing and
+									challenging profession that ended up laying the perfect
+									foundation to segue into a career in front-end development.
+									You see, I am a problem-solving pro, able to break down
+									complex problems into smaller, more manageable components and
+									come up with a step-by-step solution, all while attending to
+									each problem's unique conditions. The interpersonal skills I
+									developed while caring for patients in the high-pressure
+									environment of an emergency room have made me an expert in
+									client-facing solutions and allow me to thrive as a member of
+									any team. I have found that my passion lies in creating
+									visually stunning user interfaces to help solve real-world
+									problems, albeit in a relatively more behind-the-scenes role.
+									When I’m not coding, you can find me in the kitchen
+									experimenting with new vegan recipes, reading a horror novel
+									for my spooky book club, or hanging out with my dogs.
+									<!-- Hi! 👋  My name is Carol Bruggeman. After working in healthcare as a physician assistant for several years, I have spent the last 1+ years working toward a career change as a front end developer.
                                     After caring for patients in the emergency department throughout the Covid-19 pandemic, I found that my priorities and career goals had undergone a major shift. 
                                     I began looking for a career that would allow me to use my problem-solving skills, strong background in teamwork, and creativity while also leaving me with more time and energy to spend with my loved ones. 
                                     As I researched opportunities in the tech industry, I quickly realized that a career as a front end developer was a perfect fit. I decided to enroll in the Skillcrush Break Into Tech Program and relished in the challenge of learning a completely new skill set. 
                                     I have grown to find that building websites and web applications is both fulfilling and fun, and I would love to code your next website or collaborate on a project!
-                                    When I’m not coding, you can find me in the kitchen experimenting with new vegan recipes, reading a horror novel for my spooky book club, or hanging out with my dogs.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
+                                    When I’m not coding, you can find me in the kitchen experimenting with new vegan recipes, reading a horror novel for my spooky book club, or hanging out with my dogs. -->
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
 
-        <!-- FOOTER/CONTACT -->
-        <footer id="contact">
-            <div class="container-fluid text-center text-light" style="background-color: #07105F;">
-                <h2 class="display-6 my-5 pt-5">Get in Touch!</h2>
-                <div class="row">
-                    <div class="col col-12 col-md-4 pb-3">
-                        <h4 class="mb-3 text-info">Hire Me</h4>
-                        <address>
-                            <a href="mailto:carol.bruggeman92@gmail.com" class="text-decoration-none text-light hover-text-color">carol.bruggeman92@gmail.com</a>
-                        </address>
-                    </div>
-                    <div class="col col-12 col-md-4 pb-4">
-                        <h4 class="mb-3 text-info">Follow Me</h4>
-                            <a href="https://github.com/carolb92" target="_blank"><i class="fa-brands fa-github fs-1 mx-4 text-light py-1 px-1 hover-text-color"></i></a>
-                            <a href="https://www.linkedin.com/in/carol-bruggeman-576897258/" target="_blank"><i class="fa-brands fa-linkedin fs-1 mx-4 text-light py-1 px-1 hover-text-color"></i></a>
-                    </div>
-                    <div class="col col-12 col-md-4 pb-4">
-                        <h4 class="mb-3 text-info">Meet Me</h4>
-                        <p>
-                            <i class="fa-solid fa-map-pin fs-5"></i>
-                            Gainesville, FL
-                        </p>
-                        <p>In town? Let's grab coffee.</p>
-                    </div>
-                </div>
-                <p class="pt-5 pb-3 mb-0" style="font-size: 0.75rem;">Carol Bruggeman || 2023</p>
-            </div>
-        </footer>
-        
-    
-    
+		<!-- FOOTER/CONTACT -->
+		<footer id="contact">
+			<div
+				class="container-fluid text-center text-light"
+				style="background-color: #07105f"
+			>
+				<h2 class="display-6 my-5 pt-5">Get in Touch!</h2>
+				<div class="row">
+					<div class="col col-12 col-md-4 pb-3">
+						<h4 class="mb-3 text-info">Hire Me</h4>
+						<address>
+							<a
+								href="mailto:carol.bruggeman92@gmail.com"
+								class="text-decoration-none text-light hover-text-color"
+								>carol.bruggeman92@gmail.com</a
+							>
+						</address>
+					</div>
+					<div class="col col-12 col-md-4 pb-4">
+						<h4 class="mb-3 text-info">Follow Me</h4>
+						<a href="https://github.com/carolb92" target="_blank"
+							><i
+								class="fa-brands fa-github fs-1 mx-4 text-light py-1 px-1 hover-text-color"
+							></i
+						></a>
+						<a
+							href="https://www.linkedin.com/in/carol-bruggeman-576897258/"
+							target="_blank"
+							><i
+								class="fa-brands fa-linkedin fs-1 mx-4 text-light py-1 px-1 hover-text-color"
+							></i
+						></a>
+					</div>
+					<div class="col col-12 col-md-4 pb-4">
+						<h4 class="mb-3 text-info">Meet Me</h4>
+						<p>
+							<i class="fa-solid fa-map-pin fs-5"></i>
+							Gainesville, FL
+						</p>
+						<p>In town? Let's grab coffee.</p>
+					</div>
+				</div>
+				<p class="pt-5 pb-3 mb-0" style="font-size: 0.75rem">
+					Carol Bruggeman || 2023
+				</p>
+			</div>
+		</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-</body>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+			crossorigin="anonymous"
+		></script>
+	</body>
 </html>
