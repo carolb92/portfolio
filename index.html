@@ -505,7 +505,7 @@
 					</div>
 				</div>
 				<p class="pt-5 pb-3 mb-0" style="font-size: 0.75rem">
-					Carol Bruggeman || 2023
+					Carol Bruggeman || <span id="year"></span>
 				</p>
 			</div>
 		</footer>
@@ -515,5 +515,8 @@
 			integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
 			crossorigin="anonymous"
 		></script>
+		<script>
+			document.getElementById("year").innerHTML = new Date().getFullYear();
+		</script>
 	</body>
 </html>
