@@ -4,12 +4,19 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Carol Bruggeman Portfolio</title>
+		<!-- BOOTSTRAP -->
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
 			rel="stylesheet"
 			integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
 			crossorigin="anonymous"
 		/>
+		<!-- REMIX ICON -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<!-- FONT AWESOME -->
 		<script
 			src="https://kit.fontawesome.com/7c6ecdb88c.js"
 			crossorigin="anonymous"
@@ -158,9 +165,9 @@
 						<div class="card w-30 text-center h-100 shadow">
 							<a href="https://hoq3n8.csb.app/" target="_blank">
 								<img
-									src="./img/super-sticky-notes-tiny.png"
+									src="./img/tiny-sticky.png"
 									class="card-img-top"
-									alt="website-screenshot"
+									alt="Sticky Notes app screenshot"
 								/>
 							</a>
 							<h5 class="class card-title my-4">Super Sticky Notes</h5>
@@ -168,16 +175,16 @@
 								<p class="card-text">
 									A single page application built with React that allows users
 									to add, edit, delete, and search sticky notes for to-dos or
-									task management.
+									task management, utilizing local storage for data persistence.
 								</p>
 								<p class="class card-text">
-									<strong>Skills: </strong>React, Lifecycle Methods
+									<strong>Skills: </strong>React, TypeScript, Tailwind CSS
 								</p>
 								<p class="class card-text">
-									<strong>Tools: </strong>Code Sandbox
+									<strong>Tools: </strong>Vite, Vercel
 								</p>
 								<a
-									href="https://hoq3n8.csb.app/"
+									href="https://sticky-notes-v2-peach.vercel.app/"
 									target="_blank"
 									class="btn btn-primary text-uppercase"
 									>Live Site</a
@@ -205,7 +212,7 @@
 									eight tries to guess a word, letter by letter.
 								</p>
 								<p class="class card-text">
-									<strong>Skills: </strong>JavaScript, API
+									<strong>Skills: </strong>JavaScript
 								</p>
 								<p class="class card-text">
 									<strong>Tools: </strong>GitHub Pages
@@ -256,7 +263,7 @@
 						</div>
 					</div>
 
-					<div class="col-sm-12 col-md-6 col-lg-4 my-4">
+					<!-- <div class="col-sm-12 col-md-6 col-lg-4 my-4">
 						<div class="card w-30 text-center h-100 shadow">
 							<a href="https://demo.bigccodes.com/" target="_blank">
 								<img
@@ -289,7 +296,7 @@
 								>
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<div class="col-sm-12 col-md-6 col-lg-4 my-4">
 						<div class="card w-30 text-center h-100 shadow">
@@ -338,37 +345,66 @@
 				<h2 class="display-6 mt-5">Skills</h2>
 				<h3 class="fs-4 my-5">Developer Skills</h3>
 				<div class="row justify-content-around">
-					<div class="col col-3 col-lg-1">
+					<div class="col col-4 col-lg-1">
+						<!-- justify-content-between d-flex flex-column -->
 						<i class="fa-brands fa-html5 text-info display-5"></i>
 						<p class="text-light">HTML5</p>
 					</div>
 
-					<div class="col col-3 col-lg-1">
+					<div class="col col-4 col-lg-1">
 						<i class="fa-brands fa-css3-alt text-info display-5"></i>
 						<p class="text-light">CSS3</p>
 					</div>
 
-					<div class="col col-3 col-lg-1 gx-1">
+					<div class="col col-4 col-lg-1 gx-1">
 						<i class="fa-brands fa-square-js text-info display-5"></i>
 						<p class="text-light">JavaScript</p>
 					</div>
 
-					<div class="col col-3 col-lg-1">
+					<div class="col col-4 col-lg-1">
 						<i class="fa-brands fa-react text-info display-5"></i>
 						<p class="text-light">React</p>
 					</div>
 
-					<div class="col col-3 col-lg-1 gx-1">
+					<!-- <div class="col col-3 col-lg-1 gx-1">
 						<i class="fa-brands fa-bootstrap text-info display-5"></i>
 						<p class="text-light">Bootstrap</p>
+					</div> -->
+
+					<div class="col col-4 col-lg-1 gx-1">
+						<!-- justify-content-between d-flex flex-column -->
+						<!-- <?xml version="1.0" encoding="utf-8"?>Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+						<!-- <svg
+							fill="#0DCAF0"
+							viewBox="0 5 22 22"
+							xmlns="http://www.w3.org/2000/svg"
+							height="35%"
+							width="100%"
+						> -->
+						<!-- width="100%"
+							height="100%" -->
+						<!-- xml:space="preserve" -->
+						<!-- <path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345-.98-.99-2.114-2.134-4.593-2.134zM7 12c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345.98.989 2.115 2.134 4.594 2.134 2.667 0 4.333-1.325 5-3.976-1 1.325-2.167 1.822-3.5 1.491-.761-.189-1.305-.738-1.906-1.345C10.613 13.145 9.478 12 7 12z"
+							/>
+						</svg> -->
+						<!-- <img
+							src="./img/tailwind-css-svgrepo-com.svg"
+							alt="Tailwind CSS icon"
+							class="img-fluid"
+						/> -->
+						<i class="ri-tailwind-css-fill text-info display-5"></i>
+						<p class="text-light">Tailwind</p>
 					</div>
 
-					<div class="col col-3 col-lg-1">
+					<div class="col col-4 col-lg-1">
 						<i class="fa-brands fa-square-github text-info display-5"></i>
 						<p class="text-light">GitHub</p>
 					</div>
 
-					<div class="col col-3 col-lg-1">
+					<!-- <div class="col col-3 col-lg-1">
 						<i class="fa-brands fa-wordpress text-info display-5"></i>
 						<p class="text-light">WordPress</p>
 					</div>
@@ -376,7 +412,7 @@
 					<div class="col col-3 col-lg-1">
 						<i class="fa-brands fa-php text-info display-5"></i>
 						<p class="text-light">PHP</p>
-					</div>
+					</div> -->
 				</div>
 
 				<h3 class="fs-4 my-5">Tools</h3>
